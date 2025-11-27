@@ -1,10 +1,17 @@
+<?php
+// ข้อมูลนักศึกษาเก็บในตัวแปร PHP
+$name = "นางสาว จิตรสุภา สีหา";
+$studentID = "67040233127";
+$faculty = "วิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ";
+$year = "ปี 2";
+$interest = "อ่านนิยาย ดูหนัง ตัดต่อ";
+?>
+
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <title>ข้อมูลนักศึกษา (PHP)</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,11 +45,14 @@
         a {
             display: inline-block;
             margin: 10px;
-            font-size: 18px;
+            padding: 8px 15px;
+            background: #1b71d1;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
         }
     </style>
 </head>
-
 <body>
 
     <div class="box">
@@ -51,18 +61,16 @@
         <h2>ข้อมูลนักศึกษา</h2>
 
         <ul>
-            <li><b>ชื่อ–นามสกุล:</b> <?php echo "นางสาว จิตรสุภา สีหา"; ?></li>
-            <li><b>รหัสนักศึกษา:</b> <?php echo "67040233127"; ?></li>
-            <li><b>คณะ:</b> <?php echo "วิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ"; ?></li>
-            <li><b>ปีการศึกษา:</b> <?php echo "ปี 2"; ?></li>
-            <li><b>ความสนใจ:</b> <?php echo "อ่านนิยาย ดูหนัง ตัดต่อ"; ?></li>
+            <li><b>ชื่อ–นามสกุล:</b> <?php echo $name; ?></li>
+            <li><b>รหัสนักศึกษา:</b> <?php echo $studentID; ?></li>
+            <li><b>คณะ:</b> <?php echo $faculty; ?></li>
+            <li><b>ปีการศึกษา:</b> <?php echo $year; ?></li>
+            <li><b>ความสนใจ:</b> <?php echo $interest; ?></li>
         </ul>
     </div>
 
-    <br><br><br>
-
-    <a href="loop.php">Loop 🐔⏩⏩</a>
+    <a href="loop.php">Loop🐔⏩⏩</a>
+   
 
 </body>
-
 </html>

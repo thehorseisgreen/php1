@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Loop</title>
+<title>Loop (PHP)</title>
 <style>
     body { font-family: Arial; padding: 20px; background:#eaf4ff; }
     .box { background: #fff; padding: 15px; margin-bottom: 20px; border-radius:10px; }
@@ -11,66 +11,62 @@
 </head>
 <body>
 
-<h1> Loop </h1>
+<h1>Loop</h1>
 
 <div class="box">
     <h2>1) For Loop – ดาวเพิ่ม</h2>
-    <pre id="p1"></pre>
+    <pre>
+<?php
+// 1) For Loop – ดาวเพิ่ม
+for ($i = 1; $i <= 4; $i++) {
+    for ($j = 1; $j <= $i; $j++) {
+        echo "*";
+    }
+    echo "\n";
+}
+?>
+    </pre>
 </div>
 
 <div class="box">
     <h2>2) While Loop – ตัวเลขซ้ำ</h2>
-    <pre id="p2"></pre>
+    <pre>
+<?php
+// 2) While Loop – ตัวเลขซ้ำ
+$a = 1;
+while ($a <= 3) {
+    $j = 1;
+    while ($j <= 4) {
+        echo $a . " ";
+        $j++;
+    }
+    echo "\n";
+    $a++;
+}
+?>
+    </pre>
 </div>
 
 <div class="box">
-    <h2>3) Do While Loop – ตัวเลขเพิ่มทีละบรรทัด</h2>
-    <pre id="p3"></pre>
+    <h2>3) Do While – ตัวเลขตามบรรทัด</h2>
+    <pre>
+<?php
+// 3) Do While – ตัวเลขตามบรรทัด
+$b = 1;
+do {
+    $j = 1;
+    while ($j <= $b) {
+        echo $b . " ";
+        $j++;
+    }
+    echo "\n";
+    $b++;
+} while ($b <= 3);
+?>
+    </pre>
 </div>
 
-<script>
+<a href="wep_page.php">กลับหน้าแรก ⏪⏪</a>
 
-// 1) For Loop – ดาวเพิ่ม
-let p1 = "";
-for (let i = 1; i <= 4; i++) {
-    for (let j = 1; j <= i; j++) {
-        p1 += "*";
-    }
-    p1 += "\n";
-}
-document.getElementById("p1").textContent = p1;
-
-
-// 2) While Loop – ตัวเลขซ้ำ
-let p2 = "";
-let a = 1;
-while (a <= 3) {
-    let j = 1;
-    while (j <= 4) {
-        p2 += a + " ";
-        j++;
-    }
-    p2 += "\n";
-    a++;
-}
-document.getElementById("p2").textContent = p2;
-
-
-// 3) Do While – ตัวเลขตามบรรทัด
-let p3 = "";
-let b = 1;
-do {
-    let j = 1;
-    while (j <= b) {
-        p3 += b + " ";
-        j++;
-    }
-    p3 += "\n";
-    b++;
-} while (b <= 3);
-document.getElementById("p3").textContent = p3;
-
-</script>
-<a href="wep_page.html">กลับหน้าแรก⏪⏪</a>
 </body>
 </html>
