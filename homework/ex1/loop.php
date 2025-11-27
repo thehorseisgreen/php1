@@ -1,72 +1,73 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
-<title>Loop (PHP)</title>
-<style>
-    body { font-family: Arial; padding: 20px; background:#eaf4ff; }
-    .box { background: #fff; padding: 15px; margin-bottom: 20px; border-radius:10px; }
-    pre { background:#f4f8ff; padding:10px; border-radius:5px; }
-</style>
-</head>
-<body>
-
-<h1>Loop</h1>
-
-<div class="box">
-    <h2>1) For Loop – ดาวเพิ่ม</h2>
-    <pre>
 <?php
-// 1) For Loop – ดาวเพิ่ม
+echo "<h2>ข้อ 2 : แสดงรูปแบบลูป</h2>";
+
+echo "<h3>รูปที่ 1</h3>";
+// *
+// **
+// ***
+// ****
 for ($i = 1; $i <= 4; $i++) {
     for ($j = 1; $j <= $i; $j++) {
         echo "*";
     }
-    echo "\n";
+    echo "<br>";
+}
+
+echo "<hr>";
+
+echo "<h3>รูปที่ 2</h3>";
+// 1 1 1 1
+// 2 2 2 2
+// 3 3 3 3
+for ($i = 1; $i <= 3; $i++) {
+    for ($j = 1; $j <= 4; $j++) {
+        echo $i . " ";
+    }
+    echo "<br>";
+}
+
+echo "<hr>";
+
+echo "<h3>รูปที่ 3</h3>";
+// 1
+// 2 2
+// 3 3 3
+for ($i = 1; $i <= 3; $i++) {
+    for ($j = 1; $j <= $i; $j++) {
+        echo $i . " ";
+    }
+    echo "<br>";
+}
+
+echo "<hr>";
+
+echo "<h3>รูปที่ 4</h3>";
+// * * * * *
+// * 1 1 1 1 *
+// * 2 2 2 2 *
+// * 3 3 3 3 *
+// * * * * *
+for ($i = 1; $i <= 5; $i++) {
+    for ($j = 1; $j <= 5; $j++) {
+        if ($i == 1 || $i == 5 || $j == 1 || $j == 5) {
+            echo "* ";
+        } else {
+            echo ($i - 1) . " ";
+        }
+    }
+    echo "<br>";
+}
+
+echo "<hr>";
+
+echo "<h3>รูปที่ 5</h3>";
+// 3 3 3
+// 2 2
+// 1
+for ($i = 3; $i >= 1; $i--) {
+    for ($j = 1; $j <= $i; $j++) {
+        echo $i . " ";
+    }
+    echo "<br>";
 }
 ?>
-    </pre>
-</div>
-
-<div class="box">
-    <h2>2) While Loop – ตัวเลขซ้ำ</h2>
-    <pre>
-<?php
-// 2) While Loop – ตัวเลขซ้ำ
-$a = 1;
-while ($a <= 3) {
-    $j = 1;
-    while ($j <= 4) {
-        echo $a . " ";
-        $j++;
-    }
-    echo "\n";
-    $a++;
-}
-?>
-    </pre>
-</div>
-
-<div class="box">
-    <h2>3) Do While – ตัวเลขตามบรรทัด</h2>
-    <pre>
-<?php
-// 3) Do While – ตัวเลขตามบรรทัด
-$b = 1;
-do {
-    $j = 1;
-    while ($j <= $b) {
-        echo $b . " ";
-        $j++;
-    }
-    echo "\n";
-    $b++;
-} while ($b <= 3);
-?>
-    </pre>
-</div>
-
-<a href="wep_page.php">กลับหน้าแรก ⏪⏪</a>
-
-</body>
-</html>

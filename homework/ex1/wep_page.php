@@ -1,76 +1,57 @@
-<?php
-// ข้อมูลนักศึกษาเก็บในตัวแปร PHP
-$name = "นางสาว จิตรสุภา สีหา";
-$studentID = "67040233127";
-$faculty = "วิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ";
-$year = "ปี 2";
-$interest = "อ่านนิยาย ดูหนัง ตัดต่อ";
-?>
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>ข้อมูลนักศึกษา (PHP)</title>
+    <title>ข้อมูลส่วนแนะนำตัว</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Tahoma;
             background: #f0f8ff;
-            text-align: center;
-            padding: 30px;
-        }
-        .box {
-            background: white;
-            width: 350px;
-            margin: auto;
             padding: 20px;
-            border-radius: 10px;
         }
-        img {
-            width: 120px;
-            border-radius: 10px;
-            margin-bottom: 15px;
+        .container {
+            width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #bcd;
+        }
+        h2 {
+            color: #0077cc;
+            border-left: 6px solid #4da6ff;
+            padding-left: 10px;
         }
         ul {
-            text-align: left;
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            padding: 8px 0;
-        }
-        b {
-            color: #0055aa;
-        }
-        a {
-            display: inline-block;
-            margin: 10px;
-            padding: 8px 15px;
-            background: #1b71d1;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
+            font-size: 18px;
+            line-height: 1.8;
         }
     </style>
 </head>
 <body>
 
-    <div class="box">
-        <img src="PIC/aa.jpg" alt="profile">
+<div class="container">
 
-        <h2>ข้อมูลนักศึกษา</h2>
+    <h2>1. ส่วนแนะนำตัว (Introduction / Profile)</h2>
 
-        <ul>
-            <li><b>ชื่อ–นามสกุล:</b> <?php echo $name; ?></li>
-            <li><b>รหัสนักศึกษา:</b> <?php echo $studentID; ?></li>
-            <li><b>คณะ:</b> <?php echo $faculty; ?></li>
-            <li><b>ปีการศึกษา:</b> <?php echo $year; ?></li>
-            <li><b>ความสนใจ:</b> <?php echo $interest; ?></li>
-        </ul>
-    </div>
+    <?php
+        $fullname = "นางสาว จิตรวสุภา สีหา";
+        $student_id = "67040233127";
+        $faculty = "วิทยาศาสตร์ มหาวิทยาลัยราชภัฏอุดรธานี";
+        $major = "เทคโนโลยีสารสนเทศ";
+        $year = "นักศึกษาปี 2";
+        $interest = "อ่านนิยาย";  // ถ้ายังไม่มีให้ปล่อยว่างไว้ก่อน
+    ?>
 
-    <a href="loop.php">Loop🐔⏩⏩</a>
-   
+    <ul>
+        <li><b>ชื่อ-นามสกุล :</b> <?php echo $fullname; ?></li>
+        <li><b>รหัสนักศึกษา :</b> <?php echo $student_id; ?></li>
+        <li><b>คณะ :</b> <?php echo $faculty; ?> สาขา: <?php echo $major; ?></li>
+        <li><b>ปีการศึกษา :</b> <?php echo $year; ?></li>
+        <li><b>ความสนใจพิเศษ :</b> <?php echo $interest; ?></li>
+    </ul>
+
+</div>
 
 </body>
 </html>
