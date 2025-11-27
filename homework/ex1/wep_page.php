@@ -55,7 +55,7 @@
         <li><b>ความสนใจ:</b> <?php echo "อ่านนิยาย ดูหนัง ตัดต่อ"; ?></li>
     </ul>
 </div>
-
+<br><br><br><br>
 
 <a href="loop.php">loop⏩⏩</a>
 
